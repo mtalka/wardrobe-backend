@@ -14,8 +14,8 @@ const mongoose = require("mongoose");
 //     Cap = 10
 // }
 
-const pieceSchema = new mongoose.Schema({
-    pieceType: {
+const PieceSchema = new mongoose.Schema({
+    type: {
         type: Number,
         required: true
     },
@@ -32,14 +32,7 @@ const pieceSchema = new mongoose.Schema({
     },
     color2: {
         type: String
-    },
-    freeText: {
-        type: String
-    },
-    dateOfAcquisition: {
-        type: Date,
-        default: Date.now()
     }
 });
 
-module.exports = mongoose.model("Piece", pieceSchema);
+module.exports = mongoose.model("Piece", PieceSchema);

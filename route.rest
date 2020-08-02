@@ -1,8 +1,8 @@
-GET http://localhost:9001/pieces
+GET http://localhost:9001/api/pieces
 
 ###
 
-POST http://localhost:9001/pieces
+POST http://localhost:9001/api/pieces
 Content-Type: application/json
 
 {

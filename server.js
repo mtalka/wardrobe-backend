@@ -22,7 +22,16 @@ app.use(express.json());
 
 // Routes
 const piecesRoute = require("./routes/pieces");
-app.use("/pieces", piecesRoute);
+app.use("/api/pieces", piecesRoute);
+
+const authRoute = require("./routes/auth");
+app.use("/api/user", authRoute);
+
+const dashboardRoute = require("./routes/dashboard");
+const verifyToken = require("./routes/validate-token");
+// this route is protected with token
+app.use("/api/dashboard", verifyToken, dashboardRoute);
+
 
 app.listen(9001, () => {
     console.log("Server has started");
