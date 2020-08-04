@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 });
 
 // Create owned piece
-router.post("/newOwnedPiece", async (req, res) => {
+router.post("/ownedPiece", async (req, res) => {
     const ownedPiece = new OwnedPiece(req.body);
 
     try {
@@ -28,7 +28,7 @@ router.post("/newOwnedPiece", async (req, res) => {
 });
 
 // Create outfit
-router.post("/newOutfit", async (req, res) => {
+router.post("/outfit", async (req, res) => {
     const outfit = new Outfit(req.body);
 
     try {

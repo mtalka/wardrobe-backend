@@ -21,6 +21,9 @@ db.once("open", () => console.log("Connected to database"));
 app.use(express.json());
 
 // Routes
+const usersRoute = require("./routes/users");
+app.use("/api/users", usersRoute);
+
 const piecesRoute = require("./routes/pieces");
 app.use("/api/pieces", piecesRoute);
 
