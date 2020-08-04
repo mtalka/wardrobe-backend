@@ -15,7 +15,7 @@ const mongoose = require("mongoose");
 // }
 
 const PieceSchema = new mongoose.Schema({
-    type: {
+    pieceType: {
         type: Number,
         required: true
     },
@@ -31,6 +31,9 @@ const PieceSchema = new mongoose.Schema({
         type: String
     },
     color2: {
+        type: String
+    },
+    description: {
         type: String
     }
 });

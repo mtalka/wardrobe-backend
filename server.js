@@ -24,11 +24,15 @@ app.use(express.json());
 const piecesRoute = require("./routes/pieces");
 app.use("/api/pieces", piecesRoute);
 
+const outfitsRoute = require("./routes/outfits");
+app.use("/api/outfits", outfitsRoute);
+
 const authRoute = require("./routes/auth");
 app.use("/api/user", authRoute);
 
 const dashboardRoute = require("./routes/dashboard");
 const verifyToken = require("./routes/validate-token");
+
 // this route is protected with token
 app.use("/api/dashboard", verifyToken, dashboardRoute);
 

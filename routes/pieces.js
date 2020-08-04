@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
 
 // Get a single piece
 router.get("/:id", getPiece, (req, res) => {
-    res.send(res.post);
+    res.send(res.piece);
 });
 
 // Create piece
